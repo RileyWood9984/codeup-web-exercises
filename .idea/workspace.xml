@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4bc75e2-84fb-4008-84b4-c94f26f43bc0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/iterating_arrays_js.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/iterating.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/planets-array.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/planets-string.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/planets-js.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/split-join.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -77,7 +79,7 @@
       <updated>1674234938410</updated>
       <workItem from="1674234942093" duration="7681000" />
       <workItem from="1674250787930" duration="12809000" />
-      <workItem from="1674752292471" duration="11109000" />
+      <workItem from="1674752292471" duration="13667000" />
     </task>
     <servers />
   </component>
