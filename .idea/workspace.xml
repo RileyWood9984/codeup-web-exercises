@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4bc75e2-84fb-4008-84b4-c94f26f43bc0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/conditionals.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/conditionals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/js/break_and_continue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/js/for_loops.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loops.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,15 +56,13 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -78,7 +77,8 @@
       <option name="presentableId" value="Default" />
       <updated>1674234938410</updated>
       <workItem from="1674234942093" duration="7681000" />
-      <workItem from="1674250787930" duration="11532000" />
+      <workItem from="1674250787930" duration="12809000" />
+      <workItem from="1674752292471" duration="5271000" />
     </task>
     <servers />
   </component>
