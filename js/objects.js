@@ -46,7 +46,15 @@
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
+    console.log(shoppers[1].name);
 
+    shoppers.forEach( function(x){
+        if(x.amount>=200){
+            return console.log(x.name +" spent " + x.amount +". They have earned a discount! The new amount is: "+(x.amount-(x.amount*0.12)))
+        } else{
+            return console.log(x.name +" spent " + x.amount +". They have not earned a discount!")
+        }
+    });
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
