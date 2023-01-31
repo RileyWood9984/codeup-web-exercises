@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4bc75e2-84fb-4008-84b4-c94f26f43bc0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/circle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/math-js.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/js/break_and_continue.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/break_and_continue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/js/for_loops.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/for_loops.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/js/while.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/while.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loops.html" beforeDir="false" afterPath="$PROJECT_DIR$/loops.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/circle.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/circle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +84,7 @@
       <workItem from="1674234942093" duration="7681000" />
       <workItem from="1674250787930" duration="12809000" />
       <workItem from="1674752292471" duration="13871000" />
-      <workItem from="1675108230072" duration="11062000" />
+      <workItem from="1675108230072" duration="12608000" />
     </task>
     <servers />
   </component>
