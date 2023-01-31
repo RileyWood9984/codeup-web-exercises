@@ -65,7 +65,21 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-
+var books =[
+        {title: "Unsouled", author: {fistName:"Will",lastName:"Wight"}},
+        {title: "Dreadgod", author: {fistName: "Will",lastName: "Wight"}},
+        {title: "The Third Kingdom", author:{fistName: "Tao",lastName: "Wong"}},
+        {title: "The Resturant at the End of the Universe", author: {fistName:"Douglas",lastName: "Adams" }},
+        {title: "He who Fights with Monsters", author: {fistName:"Travis",lastName: "Deverell"}}
+    ]
+    var i=0
+    books.forEach(function (x){
+        i+=1
+        console.log("Book # " + i)
+        console.log("Title: " + x.title)
+        console.log("Author: " + x.author.fistName+" "+x.author.lastName)
+        }
+    )
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -90,7 +104,11 @@
      *      ---
      *      ...
      */
-
+function createBook (bookTitle,authorFirst,authorLast){
+    return books.push({title: bookTitle, author: {fistName: authorFirst, lastName: authorLast}})
+    }
+    createBook("Reaper",'Will','Wight')
+    console.log(books)
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author

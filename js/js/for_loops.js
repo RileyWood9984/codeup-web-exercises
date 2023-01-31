@@ -14,9 +14,7 @@ for(var i=1;i<=10;i++){
     }
 }
 for(var i= 1;i<10;i++){
-    for(var repeat=0;repeat<i;repeat++) {
-        console.log(i)
-    }
+        console.log(i.toString().repeat(i))
 }
 for (var i=100;i>=0;i--){
     console.log(i)
