@@ -1,3 +1,41 @@
-.fancy-header{
-    color: purple;
+
+h1.fancy-header {
+    margin: 0;
+    padding: 5px;
+    color: violet;
+    text-align: center;
+}
+h2 {
+    color: #66bb99;
+    text-decoration: underline;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/final.jpg");
+}
+div.background {
+    margin: 0;
+    padding: 0;
+
+    background-color: rgba(00,84 ,64,.40);
+    /*background-color: #00c690;*/
+}
+div.content{
+    margin: 0;
+    padding: 0;
+    opacity: 100%;
+    font-family: 'Cormorant Infant', serif;
+}
+ul>li{
+    list-style: square;
+}
+a:hover{
+    color: black;
+}
+a:visited{
+    color: #ca3a11;
+}
+a:active{
+    color: #8a4182;
 }
