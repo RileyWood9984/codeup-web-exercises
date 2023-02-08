@@ -6,16 +6,19 @@
 </head>
 <body>
 <form method="POST" action="https://request-inspector.glitch.me/">
-    <input type="text" required placeholder="Email address">
+    <label for="email">Email:</label>
+    <input id="email" type="text" required placeholder="Email address">
     <br>
-        <input type="password" required placeholder="Password">
+    <label for="pword">Password:</label>
+        <input id="pword" type="password" required placeholder="Password">
     <br>
     <textarea placeholder="This is for a short description of yourselves" name="bio"></textarea>
     <br>
     <p><h4>How did you hear about us?</h4>
-        Billboard<input type="radio" name="hearAboutUs">
-        Radio Advertisement<input type="radio" name="hearAboutUs">
-        Internet Advertisement<input type="radio" name="hearAboutUs">
+    <label for="bilbus">
+        <input id="bilbus" type="radio" name="hearAboutUs">Billboard<br></label><label for="radi-ray">
+        <input id="radi-ray" type="radio" name="hearAboutUs">Radio Advertisement<br></label><label for="stormspider">
+        <input id="stormspider" type="radio" name="hearAboutUs">Internet Advertisement<br></label>
 
     </p>
     <p><h4>What web browser are you using?</h4>
@@ -26,7 +29,7 @@
         <option name="Opera" id="opera">Opera</option>
         <option name="Safari" id="safari">Safari</option>
     </select></p>
-    <button>Submit</button>
+    <button type="submit">Submit</button>
 </form>
 </body>
 </html>
