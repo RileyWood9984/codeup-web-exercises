@@ -39,3 +39,20 @@ a:visited{
 a:active{
     color: #8a4182;
 }
+table{
+    align-content: center;
+}
+table,tr,td,th{
+    padding: .5em;
+    border: solid black 1px;
+    margin: 1px;
+    font-size: 18px;
+    color: violet;
+    background-color: #666666;
+    text-align: center;
+
+}
+th{
+    text-decoration: underline;
+    font-weight: bolder;
+}

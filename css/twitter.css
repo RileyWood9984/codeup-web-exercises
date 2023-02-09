@@ -66,3 +66,56 @@ a {
 .text-muted {
     color: var(--main-link-color);
 }
+.nav-item{
+    display: inline-block;
+    padding: 1.5em;
+}
+.top-nav{
+    width: 100%;
+    z-index: 10000;
+}
+.profile-header{
+    position: relative;
+}
+.profile-image{
+    position: absolute;
+    top: -40px;
+}
+.profile{
+    height: 80px;
+}
+.profile-form{
+    float: right;
+    line-height: 80px;
+
+}
+.profile-details{
+    margin: 0 0.5em;
+    float: left;
+    width: calc(25% - 1em)
+}
+.timeline{
+    margin: 0 0.5em;
+    float: left;
+    width: calc(50% - 1em)
+}
+.who-to-follow{
+    margin: 0 0.5em;
+    float: left;
+    width: calc(25% - 1em)
+}
+.container{
+    margin-bottom: 2em;
+}
+.media{
+    width: 100%;
+    background-color: var(--light-bg);
+    border: 1px solid var(--separator-color);
+    padding: .5em;
+    overflow: auto;
+}
+.media-image{
+    max-width: 50px;
+    float: left;
+    margin-top: 1.33em;
+}
