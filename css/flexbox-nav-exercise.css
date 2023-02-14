@@ -24,7 +24,7 @@ nav a {
     color: black;
     font-family: 'monsterrat',sans-serif;
     display: inline-block;
-    padding: 0 0.2em;
+    padding: 0.1em 1em;
 }
 nav a:hover {
     background: deepskyblue;
