@@ -101,4 +101,12 @@
         padding-left: 1em;
         padding-right: 1em;
     }
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    footer > p{
+        display: flex;
+        align-self: flex-end;
+    }
 }
