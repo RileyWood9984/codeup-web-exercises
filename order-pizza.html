@@ -5,6 +5,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>Pizza Order Form</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!-- Your custom css styles go here -->
@@ -110,12 +111,13 @@
     </div>
     </div>
       <div class="card text-end">
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="#" class="btn btn-primary">Next</a>
       </div>
     </div>
     </div>
 
-  <div class="tab-pane fade" id="cheese-and-sauce" role="tabpanel" aria-labelledby="cheese-and-sauce-tab"><div class="card text-dark bg-light mb-3">
+  <div class="tab-pane fade" id="cheese-and-sauce" role="tabpanel" aria-labelledby="cheese-and-sauce-tab">
+    <div class="card text-dark bg-light mb-3">
     <div class="card-header list-group-item list-group-item-action active" aria-current="true">Choose Cheese and Sauce</div>
     <div class="card-body">
       <div class="card text-dark bg-light mb-3">
@@ -151,21 +153,105 @@
         </div>
       </div>
       </div>
-      <div class="card text-end">
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+      <div class="parent">
+        <div id="n btn" class="card text-end">
+        <a href="#" class="btn btn-primary">Next</a>
+      </div>
+      <div id="p btn" class="card text-end">
+        <a href="#" class="btn btn-primary">Previous</a>
+      </div>
+
       </div>
     </div>
   </div>
   <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab"> <div class="card text-dark bg-light mb-3">
-    <div class="card-header list-group-item list-group-item-action active" aria-current="true">Choose Toppings</div>
-    <div class="card-body">
-      <div class="card text-dark bg-light mb-3">
-        <div class="card-header">Choose Meats</div>
+    <div class="card-header list-group-item list-group-item-action active" aria-current="true">Choose Toppings</div></div>
+    <div class="card text-dark bg-light mb-3">
+      <div class="card-header">Meats</div>
+      <div class="card-body">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="size" id="beef">
+              <label class="form-check-label" for="beef">
+                Beef
+              </label>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="size" id="ham">
+              <label class="form-check-label" for="ham">
+                Ham
+              </label>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="size" id="philly">
+              <label class="form-check-label" for="philly">
+                Philly Steak
+              </label>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="size" id="bacon">
+              <label class="form-check-label" for="bacon">
+                Bacon
+              </label>
+            </div>
+          </li>
+        </ul>
       </div>
+    </div>
+
+
       <div class="card text-dark bg-light mb-3">
         <div class="card-header">Choose Non-Meats</div>
+        <div class="card text-dark bg-light mb-3">
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="size" id="gp">
+                  <label class="form-check-label" for="gp">
+                    Green Peppers
+                  </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="size" id="mushrooms">
+                  <label class="form-check-label" for="mushrooms">
+                    Mushrooms
+                  </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="size" id="onions">
+                  <label class="form-check-label" for="onions">
+                    Onions
+                  </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="size" id="jp">
+                  <label class="form-check-label" for="jp">
+                    Jalapeno Peppers
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       <div class="card text-end">
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+
+        <a id="chckout" href="#" class="btn btn-primary"><span class="material-symbols-outlined">
+shopping_cart_checkout
+</span> Checkout</a>
       </div>
     </div>
   </div>

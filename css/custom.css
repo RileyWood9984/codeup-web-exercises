@@ -34,3 +34,14 @@ div.text-end{
     align-self: flex-end;
     text-align: right;
 }
+.parent{
+    display: flex;
+    flex-direction:  row-reverse;
+}
+span{
+    display: flex;
+}
+#chckout{
+    display: flex;
+    align-self: center;
+}
