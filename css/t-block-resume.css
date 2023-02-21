@@ -1,0 +1,7 @@
+h2{
+    color:deepskyblue;
+}
+p, span{
+    display: flex;
+    justify-content: center;
+}
