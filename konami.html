@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<h2 id="0"></h2>
+<h2 id="1"></h2>
+<h2 id="2"></h2>
+<h2 id="3"></h2>
+<h2 id="4"></h2>
+<h2 id="5"></h2>
+<h2 id="6"></h2>
+<h2 id="7"></h2>
+<h2 id="8"></h2>
+<h2 id="9"></h2>
+<h2 id="10"></h2>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+    let key = []
+    let userKey = []
+
+    $(document).keyup(function (event) {
+        key.push(event.keyCode)
+        userKey.push(event.code)
+        $(`#${userKey.length-1}`).html(`${userKey[userKey.length-1]}`)
+        let koCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13]
+        if (key.length === koCode.length) {
+            if (key.toString() === koCode.toString()) {
+                $('h1').html('Congats you did it!')
+                setInterval(function(){
+                    $('body').css('background-color', function () {
+                        let r = Math.floor(Math.random() * 255)
+                        let g = Math.floor(Math.random() * 255)
+                        let b = Math.floor(Math.random() * 255)
+                        let rgb = r.toString() + ', ' + g.toString() + ', ' + b.toString()
+                        return 'rgba(' + rgb + '.2)'
+                    })
+                },1500)
+            } else {
+                alert('Please start over and try again.')
+                key = [];
+                $('h1').html('')
+            }
+        } else {
+        }
+    })
+</script>
+</body>
+</html>

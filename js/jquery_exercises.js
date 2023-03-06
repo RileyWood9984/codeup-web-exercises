@@ -13,7 +13,7 @@ $(function () {
     )
     $('h1').hover(
         function () {
-            $(this).html('Just keep clicking!')
+            $(this).html('Just start clicking, for as long as you like!')
         }, function () {
             $(this).html('I am the h1').css('background-color', 'white')
         }
