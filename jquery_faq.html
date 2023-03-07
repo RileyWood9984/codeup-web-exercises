@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery FAQ</title>
+    <style>
+        .highlighted{
+            background-color: cornflowerblue;
+        }
+
+        .invisible {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<dl>
+    <dt>1 Least Frequent</dt>
+    <dd class="invisible">Do you like parks?</dd>
+    <dt>2 These questions are a bit of a series.</dt>
+    <dd class="invisible">Do you hate questions about parks?</dd>
+    <dt>3 So most of these are asked roughly the same amount.</dt>
+    <dd class="invisible">What is the most annoying question about parks?</dd>
+    <dt>4 Except this one, this one is asked a lot.</dt>
+    <dd class="invisible">Why?</dd>
+    <dt>5 It sure does get asked!</dt>
+    <dd class="invisible">Ok, but why?</dd>
+    <dt>6 Yes we are sure. </dt>
+    <dd class="invisible">Are you sure that's the most annoying?</dd>
+    <dt>7 Well maybe.</dt>
+    <dd class="invisible">Ok, but are you really sure?</dd>
+    <dt>8 These are also a series that are strange.</dt>
+    <dd class="invisible">Do you go to parks?</dd>
+    <dt>9 Like what are these questions? Some reference to an Elijah Woods interview? Yeah, right.  </dt>
+    <dd class="invisible">Have you gone to parks?</dd>
+    <dt>10 Most Frequent</dt>
+    <dd class="invisible">When will you go to parks?</dd>
+</dl>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+    let re = $('dl').html()
+    re += '<a class="toggler" href="#">Show?/Hide?</a>'
+    console.log(re);
+    $('dl').html(`${re}`)
+    $('.toggler').click(function () {
+        $('dd').toggleClass('invisible');
+    });
+    $('dt').click(function (){
+        $(this).toggleClass('highlighted')
+    })
+</script>
+</body>
+</html>
