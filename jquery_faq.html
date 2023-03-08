@@ -20,21 +20,29 @@
             height: 600px;
 
         }
+
         p {
             margin: 5px;
         }
-        .zero-LNP,.zero-RNP,.zero-WWNP{
-        display: none;
-        }
-        .one-LNP,.one-RNP,.one-WWNP{
-            display: flex;
-        }
-        .two-LNP,.two-RNP,.two-WWNP{
+
+        .zero-LNP, .zero-RNP, .zero-WWNP {
             display: none;
+            align-self: center;
+        }
+
+        .one-LNP, .one-RNP, .one-WWNP {
+            display: flex;
+            align-self: center;
+        }
+
+        .two-LNP, .two-RNP, .two-WWNP {
+            display: none;
+            align-self: center;
         }
     </style>
 </head>
 <body>
+<h1>Park FAQ & Popular National Park's </h1>
 <dl>
     <dt>1 Least Frequent</dt>
     <dd class="invisible">Do you like parks?</dd>
@@ -57,6 +65,7 @@
     <dt>10 Most Frequent</dt>
     <dd class="invisible">When will you go to parks?</dd>
 </dl>
+<hr>
 <h3>Totally Real National Park</h3>
 <ul>
     <li>Its a really real national park.</li>
@@ -66,13 +75,15 @@
 </ul>
 <div>
     <button class="left-RNP"><</button>
-    <div class="img-div-RNP"><img src="img/ducky.png"></div>
+    <div class="img-div-RNP"><img alt="placeholer-ducky" src="img/ducky.png"></div>
     <button class="right-RNP">></button>
     <p class="zero-RNP">Super real very natural bird.</p>
     <p class="one-RNP">Our totally normal visitor center</p>
-    <p class="two-RNP">See that is two different birds, that means that they are not camera drone, because in order to mass produce them we have to only have one model.</p>
+    <p class="two-RNP">See that is two different birds, that means that they are not camera drone, because in order to
+        mass produce them we have to only have one model.</p>
 
 </div>
+<hr>
 <h3>Liminal National Park</h3>
 <ul>
     <li>Its location is always changing as it exists between one space and the next!</li>
@@ -82,12 +93,15 @@
 </ul>
 <div>
     <button class="left-LNP"><</button>
-    <div class="img-div-LNP"><img src="img/ducky.png"></div>
+    <div class="img-div-LNP"><img alt="placeholer-ducky" src="img/ducky.png"></div>
     <button class="right-LNP">></button>
-    <p class="zero-LNP">A rare photo of our visitor center, not often does it stay in place long enough to get a photo of it. Even rarer that it stayed the same shape while taking the photo! </p>
-    <p class="one-LNP">Our welcome sign! It looks different to everyone! We don't know what you are seeing, but we recommend that you stay far away from it!</p>
+    <p class="zero-LNP">A rare photo of our visitor center, not often does it stay in place long enough to get a photo
+        of it. Even rarer that it stayed the same shape while taking the photo! </p>
+    <p class="one-LNP">Our welcome sign! It looks different to everyone! We don't know what you are seeing, but we
+        recommend that you stay far away from it!</p>
     <p class="two-LNP">Though you might never leave at least its a paradise!</p>
 </div>
+<hr>
 <h3>Wood Wind National Park</h3>
 <ul>
     <li>We have the nations largest ghost population, and it just keeps growing!</li>
@@ -98,7 +112,7 @@
 
 <div>
     <button class="left-WWNP"><</button>
-    <div class="img-div-WWNP"><img src="img/ducky.png"></div>
+    <div class="img-div-WWNP"><img alt="placeholer-ducky" src="img/ducky.png"></div>
     <button class="right-WWNP">></button>
     <p class="zero-WWNP">We have stunning views, from our barely haunted cabins!</p>
     <p class="one-WWNP">Our friendly staff is always willing to help!</p>
@@ -123,7 +137,7 @@
     $('.highlighter').click(function () {
         $('li').each(function (index, element) {
             listItems[index] = element
-            if ((index + 1) % 4 == 0)
+            if ((index + 1) % 4 === 0)
                 $(listItems[index]).css('background', 'yellow')
         })
     })
@@ -135,18 +149,18 @@
     $('li').each(function (index, element) {
         listItems2[index] = element
         $(listItems2[index]).click(function () {
-            $(listItems2[index]).parent().children('li').first().css('color', 'skyblue')
+            $(listItems2[index]).parent().children('li').first().css('color', 'red')
         })
     })
-    let imgArryRNP = ['<img src="img/real-bird.jpeg">',
-        '<img src="img/real-nature.jpeg">',
-        '<img src="img/wildlife.jpeg">']
-    let imgArryLNP = ['<img src="img/vistor-cabin.jpeg">',
-        '<img src="img/sign.jpeg">',
-        '<img src="img/waterfall.jpeg">']
-    let imgArryWWNP = ['<img src="img/not-spooky.jpeg">',
+    let imgArryRNP = ['<img alt="robo-bird" src="img/real-bird.jpeg">',
+        '<img alt="r-and-d-labs" src="img/real-nature.jpeg">',
+        '<img alt="decoy-bird" src="img/wildlife.jpeg">']
+    let imgArryLNP = ['<img alt="do-not-enter-it-gets-worse" src="img/vistor-cabin.jpeg">',
+        '<img alt="the-text-shifts-constantly" src="img/sign.jpeg">',
+        '<img alt="the-water-tastes-of-blood" src="img/waterfall.jpeg">']
+    let imgArryWWNP = ['<img alt="" src="img/not-spooky.jpeg">',
         '<img src="img/friendly-staff.jpeg">',
-    '<img src="img/eerie-beauty.jpeg">']
+        '<img src="img/eerie-beauty.jpeg">']
     $('.img-div-RNP').html(imgArryRNP[1])
     $('.img-div-LNP').html(imgArryLNP[1])
     $('.img-div-WWNP').html(imgArryWWNP[1])
@@ -155,18 +169,18 @@
         switch ($('.img-div-RNP').html()) {
             case imgArryRNP[0]:
                 $('.img-div-RNP').html(imgArryRNP[2])
-                $('p.two-RNP').css('display','flex')
-                $('p.zero-RNP').css('display','none')
+                $('p.two-RNP').css('display', 'flex')
+                $('p.zero-RNP').css('display', 'none')
                 break;
             case imgArryRNP[1]:
                 $('.img-div-RNP').html(imgArryRNP[0])
-                $('p.zero-RNP').css('display','flex')
-                $('p.one-RNP').css('display','none')
+                $('p.zero-RNP').css('display', 'flex')
+                $('p.one-RNP').css('display', 'none')
                 break;
             case imgArryRNP[2]:
                 $('.img-div-RNP').html(imgArryRNP[1])
-                $('p.one-RNP').css('display','flex')
-                $('p.two-RNP').css('display','none')
+                $('p.one-RNP').css('display', 'flex')
+                $('p.two-RNP').css('display', 'none')
                 break;
             default:
         }
@@ -175,18 +189,18 @@
         switch ($('.img-div-LNP').html()) {
             case imgArryLNP[0]:
                 $('.img-div-LNP').html(imgArryLNP[2])
-                $('p.two-LNP').css('display','flex')
-                $('p.zero-LNP').css('display','none')
+                $('p.two-LNP').css('display', 'flex')
+                $('p.zero-LNP').css('display', 'none')
                 break;
             case imgArryLNP[1]:
                 $('.img-div-LNP').html(imgArryLNP[0])
-                $('p.zero-LNP').css('display','flex')
-                $('p.one-LNP').css('display','none')
+                $('p.zero-LNP').css('display', 'flex')
+                $('p.one-LNP').css('display', 'none')
                 break;
             case imgArryLNP[2]:
                 $('.img-div-LNP').html(imgArryLNP[1])
-                $('p.one-LNP').css('display','flex')
-                $('p.two-LNP').css('display','none')
+                $('p.one-LNP').css('display', 'flex')
+                $('p.two-LNP').css('display', 'none')
                 break;
             default:
         }
@@ -195,18 +209,18 @@
         switch ($('.img-div-WWNP').html()) {
             case imgArryWWNP[0]:
                 $('.img-div-WWNP').html(imgArryWWNP[2])
-                $('p.two-WWNP').css('display','flex')
-                $('p.zero-WWNP').css('display','none')
+                $('p.two-WWNP').css('display', 'flex')
+                $('p.zero-WWNP').css('display', 'none')
                 break;
             case imgArryWWNP[1]:
                 $('.img-div-WWNP').html(imgArryWWNP[0])
-                $('p.zero-WWNP').css('display','flex')
-                $('p.one-WWNP').css('display','none')
+                $('p.zero-WWNP').css('display', 'flex')
+                $('p.one-WWNP').css('display', 'none')
                 break;
             case imgArryWWNP[2]:
                 $('.img-div-WWNP').html(imgArryWWNP[1])
-                $('p.one-WWNP').css('display','flex')
-                $('p.two-WWNP').css('display','none')
+                $('p.one-WWNP').css('display', 'flex')
+                $('p.two-WWNP').css('display', 'none')
                 break;
             default:
         }
@@ -215,18 +229,18 @@
         switch ($('.img-div-WWNP').html()) {
             case imgArryWWNP[0]:
                 $('.img-div-WWNP').html(imgArryWWNP[1])
-                $('p.one-WWNP').css('display','flex')
-                $('p.zero-WWNP').css('display','none')
+                $('p.one-WWNP').css('display', 'flex')
+                $('p.zero-WWNP').css('display', 'none')
                 break;
             case imgArryWWNP[1]:
                 $('.img-div-WWNP').html(imgArryWWNP[2])
-                $('p.two-WWNP').css('display','flex')
-                $('p.one-WWNP').css('display','none')
+                $('p.two-WWNP').css('display', 'flex')
+                $('p.one-WWNP').css('display', 'none')
                 break;
             case imgArryWWNP[2]:
                 $('.img-div-WWNP').html(imgArryWWNP[0])
-                $('p.zero-WWNP').css('display','flex')
-                $('p.two-WWNP').css('display','none')
+                $('p.zero-WWNP').css('display', 'flex')
+                $('p.two-WWNP').css('display', 'none')
                 break;
             default:
         }
@@ -235,18 +249,18 @@
         switch ($('.img-div-LNP').html()) {
             case imgArryLNP[0]:
                 $('.img-div-LNP').html(imgArryLNP[1])
-                $('p.one-LNP').css('display','flex')
-                $('p.zero-LNP').css('display','none')
+                $('p.one-LNP').css('display', 'flex')
+                $('p.zero-LNP').css('display', 'none')
                 break;
             case imgArryLNP[1]:
                 $('.img-div-LNP').html(imgArryLNP[2])
-                $('p.two-LNP').css('display','flex')
-                $('p.one-LNP').css('display','none')
+                $('p.two-LNP').css('display', 'flex')
+                $('p.one-LNP').css('display', 'none')
                 break;
             case imgArryLNP[2]:
                 $('.img-div-LNP').html(imgArryLNP[0])
-                $('p.zero-LNP').css('display','flex')
-                $('p.two-LNP').css('display','none')
+                $('p.zero-LNP').css('display', 'flex')
+                $('p.two-LNP').css('display', 'none')
                 break;
             default:
         }
@@ -255,18 +269,18 @@
         switch ($('.img-div-RNP').html()) {
             case imgArryRNP[0]:
                 $('.img-div-RNP').html(imgArryRNP[1])
-                $('p.one-RNP').css('display','flex')
-                $('p.zero-RNP').css('display','none')
+                $('p.one-RNP').css('display', 'flex')
+                $('p.zero-RNP').css('display', 'none')
                 break;
             case imgArryRNP[1]:
                 $('.img-div-RNP').html(imgArryRNP[2])
-                $('p.two-RNP').css('display','flex')
-                $('p.one-RNP').css('display','none')
+                $('p.two-RNP').css('display', 'flex')
+                $('p.one-RNP').css('display', 'none')
                 break;
             case imgArryRNP[2]:
                 $('.img-div-RNP').html(imgArryRNP[0])
-                $('p.zero-RNP').css('display','flex')
-                $('p.two-RNP').css('display','none')
+                $('p.zero-RNP').css('display', 'flex')
+                $('p.two-RNP').css('display', 'none')
                 break;
             default:
         }
