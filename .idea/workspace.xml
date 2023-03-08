@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4bc75e2-84fb-4008-84b4-c94f26f43bc0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/jquery_faq.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/eerie-beauty.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/friendly-staff.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/not-spooky.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/real-bird.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/real-nature.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/sign.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/vistor-cabin.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/waterfall.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/wildlife.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery_faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/jquery_faq.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,13 +69,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -86,7 +97,8 @@
       <workItem from="1675108230072" duration="14844000" />
       <workItem from="1677513891266" duration="4226000" />
       <workItem from="1677696339025" duration="2536000" />
-      <workItem from="1678124893510" duration="17193000" />
+      <workItem from="1678124893510" duration="17676000" />
+      <workItem from="1678289216643" duration="14106000" />
     </task>
     <servers />
   </component>

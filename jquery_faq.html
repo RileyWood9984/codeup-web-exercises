@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <title>Jquery FAQ</title>
     <style>
-        .highlighted{
+        .highlighted {
             background-color: cornflowerblue;
         }
 
         .invisible {
             visibility: hidden;
+        }
+
+        div {
+            display: flex;
+        }
+
+        img {
+            height: 600px;
+
+        }
+        p {
+            margin: 5px;
+        }
+        .zero-LNP,.zero-RNP,.zero-WWNP{
+        display: none;
+        }
+        .one-LNP,.one-RNP,.one-WWNP{
+            display: flex;
+        }
+        .two-LNP,.two-RNP,.two-WWNP{
+            display: none;
         }
     </style>
 </head>
@@ -25,17 +46,65 @@
     <dd class="invisible">Why?</dd>
     <dt>5 It sure does get asked!</dt>
     <dd class="invisible">Ok, but why?</dd>
-    <dt>6 Yes we are sure. </dt>
+    <dt>6 Yes we are sure.</dt>
     <dd class="invisible">Are you sure that's the most annoying?</dd>
     <dt>7 Well maybe.</dt>
     <dd class="invisible">Ok, but are you really sure?</dd>
     <dt>8 These are also a series that are strange.</dt>
     <dd class="invisible">Do you go to parks?</dd>
-    <dt>9 Like what are these questions? Some reference to an Elijah Woods interview? Yeah, right.  </dt>
+    <dt>9 Like what are these questions? Some reference to an Elijah Woods interview? Yeah, right.</dt>
     <dd class="invisible">Have you gone to parks?</dd>
     <dt>10 Most Frequent</dt>
     <dd class="invisible">When will you go to parks?</dd>
 </dl>
+<h3>Totally Real National Park</h3>
+<ul>
+    <li>Its a really real national park.</li>
+    <li>It is not a secret government facility.</li>
+    <li>We are not trying to create man beast hybrid here.</li>
+    <li>All the scientists on staff are here for nature research nothing else.</li>
+</ul>
+<div>
+    <button class="left-RNP"><</button>
+    <div class="img-div-RNP"><img src="img/ducky.png"></div>
+    <button class="right-RNP">></button>
+    <p class="zero-RNP">Super real very natural bird.</p>
+    <p class="one-RNP">Our totally normal visitor center</p>
+    <p class="two-RNP">See that is two different birds, that means that they are not camera drone, because in order to mass produce them we have to only have one model.</p>
+
+</div>
+<h3>Liminal National Park</h3>
+<ul>
+    <li>Its location is always changing as it exists between one space and the next!</li>
+    <li>If you've never been here before it'll feel disturbingly familiar and that's okay!</li>
+    <li>We have a 100% guest retention rate! It's inviting that you can never leave!</li>
+    <li>Eventually the park will take you too!</li>
+</ul>
+<div>
+    <button class="left-LNP"><</button>
+    <div class="img-div-LNP"><img src="img/ducky.png"></div>
+    <button class="right-LNP">></button>
+    <p class="zero-LNP">A rare photo of our visitor center, not often does it stay in place long enough to get a photo of it. Even rarer that it stayed the same shape while taking the photo! </p>
+    <p class="one-LNP">Our welcome sign! It looks different to everyone! We don't know what you are seeing, but we recommend that you stay far away from it!</p>
+    <p class="two-LNP">Though you might never leave at least its a paradise!</p>
+</div>
+<h3>Wood Wind National Park</h3>
+<ul>
+    <li>We have the nations largest ghost population, and it just keeps growing!</li>
+    <li>A national hotspot for ghost hunters!</li>
+    <li>Home of the discounted and lightly used ghost equipment emporium. We get new stock daily!</li>
+    <li>We are always busy, yet we have vacancies daily.</li>
+</ul>
+
+<div>
+    <button class="left-WWNP"><</button>
+    <div class="img-div-WWNP"><img src="img/ducky.png"></div>
+    <button class="right-WWNP">></button>
+    <p class="zero-WWNP">We have stunning views, from our barely haunted cabins!</p>
+    <p class="one-WWNP">Our friendly staff is always willing to help!</p>
+    <p class="two-WWNP">Our forests are safe enough to hike alone!</p>
+</div>
+<button class="highlighter">Highlight</button>
 
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
@@ -43,13 +112,164 @@
     "use strict";
     let re = $('dl').html()
     re += '<a class="toggler" href="#">Show?/Hide?</a>'
-    console.log(re);
     $('dl').html(`${re}`)
     $('.toggler').click(function () {
         $('dd').toggleClass('invisible');
     });
-    $('dt').click(function (){
+    $('dt').click(function () {
         $(this).toggleClass('highlighted')
+    })
+    let listItems = [];
+    $('.highlighter').click(function () {
+        $('li').each(function (index, element) {
+            listItems[index] = element
+            if ((index + 1) % 4 == 0)
+                $(listItems[index]).css('background', 'yellow')
+        })
+    })
+    $('h3').click(function () {
+        $(this).next().children().css('font-weight', 'bold')
+    })
+    let listItems2 = [];
+
+    $('li').each(function (index, element) {
+        listItems2[index] = element
+        $(listItems2[index]).click(function () {
+            $(listItems2[index]).parent().children('li').first().css('color', 'skyblue')
+        })
+    })
+    let imgArryRNP = ['<img src="img/real-bird.jpeg">',
+        '<img src="img/real-nature.jpeg">',
+        '<img src="img/wildlife.jpeg">']
+    let imgArryLNP = ['<img src="img/vistor-cabin.jpeg">',
+        '<img src="img/sign.jpeg">',
+        '<img src="img/waterfall.jpeg">']
+    let imgArryWWNP = ['<img src="img/not-spooky.jpeg">',
+        '<img src="img/friendly-staff.jpeg">',
+    '<img src="img/eerie-beauty.jpeg">']
+    $('.img-div-RNP').html(imgArryRNP[1])
+    $('.img-div-LNP').html(imgArryLNP[1])
+    $('.img-div-WWNP').html(imgArryWWNP[1])
+
+    $('.left-RNP').click(function () {
+        switch ($('.img-div-RNP').html()) {
+            case imgArryRNP[0]:
+                $('.img-div-RNP').html(imgArryRNP[2])
+                $('p.two-RNP').css('display','flex')
+                $('p.zero-RNP').css('display','none')
+                break;
+            case imgArryRNP[1]:
+                $('.img-div-RNP').html(imgArryRNP[0])
+                $('p.zero-RNP').css('display','flex')
+                $('p.one-RNP').css('display','none')
+                break;
+            case imgArryRNP[2]:
+                $('.img-div-RNP').html(imgArryRNP[1])
+                $('p.one-RNP').css('display','flex')
+                $('p.two-RNP').css('display','none')
+                break;
+            default:
+        }
+    })
+    $('.left-LNP').click(function () {
+        switch ($('.img-div-LNP').html()) {
+            case imgArryLNP[0]:
+                $('.img-div-LNP').html(imgArryLNP[2])
+                $('p.two-LNP').css('display','flex')
+                $('p.zero-LNP').css('display','none')
+                break;
+            case imgArryLNP[1]:
+                $('.img-div-LNP').html(imgArryLNP[0])
+                $('p.zero-LNP').css('display','flex')
+                $('p.one-LNP').css('display','none')
+                break;
+            case imgArryLNP[2]:
+                $('.img-div-LNP').html(imgArryLNP[1])
+                $('p.one-LNP').css('display','flex')
+                $('p.two-LNP').css('display','none')
+                break;
+            default:
+        }
+    })
+    $('.left-WWNP').click(function () {
+        switch ($('.img-div-WWNP').html()) {
+            case imgArryWWNP[0]:
+                $('.img-div-WWNP').html(imgArryWWNP[2])
+                $('p.two-WWNP').css('display','flex')
+                $('p.zero-WWNP').css('display','none')
+                break;
+            case imgArryWWNP[1]:
+                $('.img-div-WWNP').html(imgArryWWNP[0])
+                $('p.zero-WWNP').css('display','flex')
+                $('p.one-WWNP').css('display','none')
+                break;
+            case imgArryWWNP[2]:
+                $('.img-div-WWNP').html(imgArryWWNP[1])
+                $('p.one-WWNP').css('display','flex')
+                $('p.two-WWNP').css('display','none')
+                break;
+            default:
+        }
+    })
+    $('.right-WWNP').click(function () {
+        switch ($('.img-div-WWNP').html()) {
+            case imgArryWWNP[0]:
+                $('.img-div-WWNP').html(imgArryWWNP[1])
+                $('p.one-WWNP').css('display','flex')
+                $('p.zero-WWNP').css('display','none')
+                break;
+            case imgArryWWNP[1]:
+                $('.img-div-WWNP').html(imgArryWWNP[2])
+                $('p.two-WWNP').css('display','flex')
+                $('p.one-WWNP').css('display','none')
+                break;
+            case imgArryWWNP[2]:
+                $('.img-div-WWNP').html(imgArryWWNP[0])
+                $('p.zero-WWNP').css('display','flex')
+                $('p.two-WWNP').css('display','none')
+                break;
+            default:
+        }
+    })
+    $('.right-LNP').click(function () {
+        switch ($('.img-div-LNP').html()) {
+            case imgArryLNP[0]:
+                $('.img-div-LNP').html(imgArryLNP[1])
+                $('p.one-LNP').css('display','flex')
+                $('p.zero-LNP').css('display','none')
+                break;
+            case imgArryLNP[1]:
+                $('.img-div-LNP').html(imgArryLNP[2])
+                $('p.two-LNP').css('display','flex')
+                $('p.one-LNP').css('display','none')
+                break;
+            case imgArryLNP[2]:
+                $('.img-div-LNP').html(imgArryLNP[0])
+                $('p.zero-LNP').css('display','flex')
+                $('p.two-LNP').css('display','none')
+                break;
+            default:
+        }
+    })
+    $('.right-RNP').click(function () {
+        switch ($('.img-div-RNP').html()) {
+            case imgArryRNP[0]:
+                $('.img-div-RNP').html(imgArryRNP[1])
+                $('p.one-RNP').css('display','flex')
+                $('p.zero-RNP').css('display','none')
+                break;
+            case imgArryRNP[1]:
+                $('.img-div-RNP').html(imgArryRNP[2])
+                $('p.two-RNP').css('display','flex')
+                $('p.one-RNP').css('display','none')
+                break;
+            case imgArryRNP[2]:
+                $('.img-div-RNP').html(imgArryRNP[0])
+                $('p.zero-RNP').css('display','flex')
+                $('p.two-RNP').css('display','none')
+                break;
+            default:
+        }
     })
 </script>
 </body>
