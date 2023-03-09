@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<h1 class="text-bg-primary m-1 p-1">My Tool Store</h1>
+<h1 class="text-bg-primary m-1 text-center">My Tool Store</h1>
 
 <table class="text-bg-secondary m-1 p-1" id="products">
     <thead>
@@ -33,7 +33,7 @@
     (function () {
         "use strict";
         let tableBody
-
+// commenting out this section show the refresh button working
         $.ajax("data/inventory.json", {
             type: "GET",
             dataType: "json",
@@ -46,7 +46,7 @@
             })
             $('#insertProducts').html(`${tableBody}`)
         });
-
+//
         let btn = $('#btn')
         $(btn).click(function (e) {
             e.preventDefault()
