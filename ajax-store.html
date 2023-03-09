@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+<body>
+
+<h1 class="text-bg-primary m-1 p-1">My Tool Store</h1>
+
+<table class="text-bg-secondary m-1 p-1" id="products">
+    <thead>
+    <tr>
+        <th class="col-3">Title</th>
+        <th class="col-3">Quantity</th>
+        <th class="col-3">Price</th>
+        <th class="col-3">Categories</th>
+    </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+<div class="d-flex justify-content-center m-1">
+<button class="col-12 btn btn-success d-flex justify-content-center " id="btn" type="reset">Refresh</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    (function () {
+        "use strict";
+        let tableBody
+
+        $.ajax("data/inventory.json", {
+            type: "GET",
+            dataType: "json",
+        }).done(function (data, status, jqxhr) {
+            data.forEach(function (object) {
+                tableBody += `<tr><td>${object.title}</td>
+                <td>${object.quantity}</td>
+                <td>${object.price}</td>
+                <td>${object.categories}</td></tr>`
+            })
+            $('#insertProducts').html(`${tableBody}`)
+        });
+
+        let btn = $('#btn')
+        $(btn).click(function (e) {
+            e.preventDefault()
+            tableBody = null
+            $.get("data/inventory.json").done(function (x, y, z) {
+                x.forEach(function (a) {
+                    tableBody += `<tr><td>${a.title}</td>
+                <td>${a.quantity}</td>
+                <td>${a.price}</td>
+                <td>${a.categories}</td></tr>`
+
+                })
+                $('#insertProducts').html(`${tableBody}`)
+            })
+        })
+    })();
+</script>
+
+</body>
+</html>

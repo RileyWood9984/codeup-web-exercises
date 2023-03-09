@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4bc75e2-84fb-4008-84b4-c94f26f43bc0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ajax-store.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/inventory.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jquery_faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/jquery_faq.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +90,7 @@
       <workItem from="1677513891266" duration="4226000" />
       <workItem from="1677696339025" duration="2536000" />
       <workItem from="1678124893510" duration="17676000" />
-      <workItem from="1678289216643" duration="15865000" />
+      <workItem from="1678289216643" duration="21831000" />
     </task>
     <servers />
   </component>
