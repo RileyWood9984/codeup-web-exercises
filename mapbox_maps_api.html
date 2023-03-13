@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox</title>
+    <!--Mapbox-->
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet'/>
+
+    <script src="js/mapbox-geocoder-utils.js"></script>
+</head>
+<body>
+
+<label for="favorites">Favorite Restaurants</label>
+<select id="favorites">
+    <option>Casa Bonita</option>
+    <option>Freddy Fazbear's</option>
+    <option>Area 51</option>
+</select>
+<label for="zoom">Zoom</label>
+<select name="zoom" id="zoom">
+    <option>20</option>
+    <option>15</option>
+    <option>10</option>
+    <option>5</option>
+    <option>0</option>
+
+</select>
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+
+    let token = 'pk.eyJ1Ijoicmp3OTk4NCIsImEiOiJjbGYybzdhYjYwa2YyNDRwajg2c3U5Nm1tIn0.rKqULnT7RFG34Tzf-y5gaA';
+    let myMarker;
+    let myMarker2;
+    let myMarker3;
+    let myObj;
+    let myObj2;
+    let myObj3;
+    let locations = document.querySelector('#favorites')
+    let zoomLevel = document.querySelector('#zoom')
+
+    mapboxgl.accessToken = token
+
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v12', // style URL
+        center: [-105.07096, 39.74197], // starting position [lng, lat]
+        zoom: 1, // starting zoom
+    });
+
+    geocode('6715 W Colfax Ave, Lakewood, CO 80214', token).then(function (results) {
+        myObj = {center: results, zoom: 15}
+        myMarker = new mapboxgl.Marker();
+        myMarker.setLngLat(results);
+        myMarker.addTo(map)
+        let myPopup = new mapboxgl.Popup();
+        myPopup.setHTML("<span>Its Casa Bonita, wow!</span>")
+        myMarker.setPopup(myPopup);
+    })
+
+    reverseGeocode({lat: 45.012826101821545, lng: 78.42943625304927}, token).then(function (results) {
+        myMarker2 = new mapboxgl.Marker();
+        myMarker2.setLngLat([78.42943625304927, 45.012826101821545]);
+        myMarker2.addTo(map);
+        let myPopup = new mapboxgl.Popup();
+        myPopup.setHTML("<span>Nothing bad has ever happened here!</span>");
+        myMarker2.setPopup(myPopup);
+        console.log(myMarker2._lngLat);
+        myObj2 = {center: [myMarker2._lngLat.lng, myMarker2._lngLat.lat], zoom: 15}
+    })
+
+    reverseGeocode({lat: 37.265006, lng: -115.797803}, token).then(function (results) {
+        myMarker3 = new mapboxgl.Marker();
+        myMarker3.setLngLat([-115.792803, 37.247252])
+        myMarker3.addTo(map);
+        let myPopup = new mapboxgl.Popup();
+        myPopup.setHTML("<span>Great food here, its outta this world!</span>");
+        myMarker3.setPopup(myPopup);
+        myObj3 = {center: [myMarker3._lngLat.lng, myMarker3._lngLat.lat], zoom: 15}
+    })
+
+    function fly(e) {
+        e.preventDefault();
+        let selected = locations.value;
+        if (selected === 'Casa Bonita') {
+            map.flyTo(myObj)
+        } else if (selected === "Freddy Fazbear's") {
+            map.flyTo(myObj2)
+        } else {
+            map.flyTo(myObj3)
+        }
+    }
+
+    function zoomTo(e) {
+        e.preventDefault();
+        let selected = zoomLevel.value;
+        switch (selected) {
+            case '20':
+                map.flyTo({zoom:20})
+                break;
+            case '15':
+                map.flyTo({zoom:15})
+                break;
+            case '10':
+                map.flyTo({zoom:10})
+                break;
+            case '5':
+                map.flyTo({zoom:5})
+                break;
+            case '0':
+                map.flyTo({zoom:0})
+                break;
+        }
+
+    }
+    console.log(map.boxZoom)
+    console.log(zoomLevel.value)
+
+    locations.addEventListener('change', fly);
+    zoomLevel.addEventListener('change', zoomTo)
+</script>
+</body>
+</html>
