@@ -1,0 +1,23 @@
+body {
+    background-color: cornflowerblue;
+    font-family: "Times New Roman", sans-serif;
+}
+
+div {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5px;
+}
+
+.forecast {
+    width: 5rem !important;
+}
+
+#map {
+    border-radius: 25%;
+}
+
+.interact {
+    padding: 10px;
+    justify-content: space-between;
+}

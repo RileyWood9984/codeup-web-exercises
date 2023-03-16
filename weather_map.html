@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map Project</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--Mapbox-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet'/>
+    <!--Custom css-->
+    <link rel="stylesheet" href="css/weather_map.css">
+</head>
+<body>
+<!--Title-->
+<div><h2 class="d-flex text-start">Weather app</h2></div>
+<!--Interaction bar-->
+<div class="interact">
+    <div>
+        <label for="search">Search</label>
+        <input type="text" id="search">
+        <button type="submit" class="search">Find</button>
+    </div>
+    <div>
+        <button class="zoomin" type="submit">Zoom in</button>
+        <button class="zoomout" type="submit">Zoom out</button>
+    </div>
+</div>
+<!--5-day weather-->
+<section class="container">
+    <div>
+        <div class="forecast" id="day1"></div>
+        <div class="forecast" id="day2"></div>
+        <div class="forecast" id="day3"></div>
+        <div class="forecast" id="day4"></div>
+        <div class="forecast" id="day5"></div>
+    </div>
+</section>
+<br>
+<!--Map-->
+<section class="container">
+    <div id='map' style='width: auto; height: 400px;'></div>
+</section>
+</body>
+<!--Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+<!--JQuery-->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<!--Mapbox-->
+<script src="js/mapbox-geocoder-utils.js"></script>
+<!--Keys-->
+<script src="js/js-hidden/keys.js"></script>
+<!--Custom-->
+<script src="js/weather_map.js"></script>
+</html>
